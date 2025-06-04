@@ -1,0 +1,28 @@
+[package]
+name = "eeg-monitor-wasm"
+version = "0.1.0"
+edition = "2021"
+description = "WASM module for EEG data processing and visualization"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+web-sys = "0.3"
+js-sys = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde-wasm-bindgen = "0.6"
+chrono = { version = "0.4", features = ["serde", "wasm-bindgen"] }
+
+[dependencies.wee_alloc]
+version = "0.4.2"
+optional = true
+
+[features]
+default = ["console_error_panic_hook"]
+console_error_panic_hook = ["dep:console_error_panic_hook"]
+
+[dependencies.console_error_panic_hook]
+version = "0.1.1"
+optional = true
