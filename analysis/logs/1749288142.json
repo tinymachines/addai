@@ -1,0 +1,208 @@
+Connected to /dev/ttyACM0 at 9600 baud
+Invalid signal_quality: 648
+{"timestamp": "2025-06-07T05:22:27.708135", "signal_quality": 0, "attention": 27, "meditation": 53, "eeg_power": {"delta": 210020, "theta": 12790, "low_alpha": 2656, "high_alpha": 11519, "low_beta": 3205, "high_beta": 2160, "low_gamma": 2197, "mid_gamma": 1849}}
+Unexpected error parsing CSV line '0,27,53,210020,12790,2656,11519,3205,2160,2197,1849': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:28.707498", "signal_quality": 0, "attention": 29, "meditation": 63, "eeg_power": {"delta": 858474, "theta": 138023, "low_alpha": 34857, "high_alpha": 14626, "low_beta": 20877, "high_beta": 44420, "low_gamma": 11302, "mid_gamma": 13410}}
+Unexpected error parsing CSV line '0,29,63,858474,138023,34857,14626,20877,44420,11302,13410': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:29.698707", "signal_quality": 0, "attention": 24, "meditation": 66, "eeg_power": {"delta": 437248, "theta": 79204, "low_alpha": 11439, "high_alpha": 19465, "low_beta": 15637, "high_beta": 5567, "low_gamma": 3065, "mid_gamma": 2328}}
+Unexpected error parsing CSV line '0,24,66,437248,79204,11439,19465,15637,5567,3065,2328': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:30.693855", "signal_quality": 0, "attention": 30, "meditation": 64, "eeg_power": {"delta": 157278, "theta": 35215, "low_alpha": 18157, "high_alpha": 12036, "low_beta": 12075, "high_beta": 7722, "low_gamma": 6637, "mid_gamma": 3115}}
+Unexpected error parsing CSV line '0,30,64,157278,35215,18157,12036,12075,7722,6637,3115': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:31.685155", "signal_quality": 0, "attention": 23, "meditation": 56, "eeg_power": {"delta": 710057, "theta": 39347, "low_alpha": 5145, "high_alpha": 9894, "low_beta": 7400, "high_beta": 1798, "low_gamma": 3340, "mid_gamma": 4201}}
+Unexpected error parsing CSV line '0,23,56,710057,39347,5145,9894,7400,1798,3340,4201': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:32.688714", "signal_quality": 0, "attention": 3, "meditation": 60, "eeg_power": {"delta": 998180, "theta": 1184917, "low_alpha": 372449, "high_alpha": 112017, "low_beta": 52777, "high_beta": 44465, "low_gamma": 36298, "mid_gamma": 96476}}
+Unexpected error parsing CSV line '0,3,60,998180,1184917,372449,112017,52777,44465,36298,96476': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:33.671863", "signal_quality": 0, "attention": 8, "meditation": 64, "eeg_power": {"delta": 359619, "theta": 20574, "low_alpha": 6480, "high_alpha": 7313, "low_beta": 2045, "high_beta": 2677, "low_gamma": 5256, "mid_gamma": 4303}}
+Unexpected error parsing CSV line '0,8,64,359619,20574,6480,7313,2045,2677,5256,4303': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:34.675125", "signal_quality": 0, "attention": 1, "meditation": 60, "eeg_power": {"delta": 212962, "theta": 171530, "low_alpha": 46677, "high_alpha": 16903, "low_beta": 23054, "high_beta": 13191, "low_gamma": 5411, "mid_gamma": 16582}}
+Unexpected error parsing CSV line '0,1,60,212962,171530,46677,16903,23054,13191,5411,16582': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:35.670433", "signal_quality": 0, "attention": 7, "meditation": 66, "eeg_power": {"delta": 2730961, "theta": 425964, "low_alpha": 67218, "high_alpha": 254760, "low_beta": 34784, "high_beta": 52503, "low_gamma": 59299, "mid_gamma": 73042}}
+Unexpected error parsing CSV line '0,7,66,2730961,425964,67218,254760,34784,52503,59299,73042': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:36.661500", "signal_quality": 0, "attention": 21, "meditation": 66, "eeg_power": {"delta": 257788, "theta": 29478, "low_alpha": 13771, "high_alpha": 4501, "low_beta": 6962, "high_beta": 6813, "low_gamma": 3701, "mid_gamma": 8611}}
+Unexpected error parsing CSV line '0,21,66,257788,29478,13771,4501,6962,6813,3701,8611': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:37.652978", "signal_quality": 0, "attention": 30, "meditation": 69, "eeg_power": {"delta": 690072, "theta": 23699, "low_alpha": 22703, "high_alpha": 3800, "low_beta": 2244, "high_beta": 9363, "low_gamma": 5886, "mid_gamma": 2606}}
+Unexpected error parsing CSV line '0,30,69,690072,23699,22703,3800,2244,9363,5886,2606': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:38.648177", "signal_quality": 0, "attention": 38, "meditation": 75, "eeg_power": {"delta": 874770, "theta": 20919, "low_alpha": 8483, "high_alpha": 8186, "low_beta": 3537, "high_beta": 4987, "low_gamma": 6190, "mid_gamma": 3257}}
+Unexpected error parsing CSV line '0,38,75,874770,20919,8483,8186,3537,4987,6190,3257': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:39.655760", "signal_quality": 0, "attention": 35, "meditation": 74, "eeg_power": {"delta": 1203485, "theta": 1165600, "low_alpha": 461254, "high_alpha": 265495, "low_beta": 71978, "high_beta": 77676, "low_gamma": 79704, "mid_gamma": 105506}}
+Unexpected error parsing CSV line '0,35,74,1203485,1165600,461254,265495,71978,77676,79704,105506': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:40.638835", "signal_quality": 0, "attention": 30, "meditation": 80, "eeg_power": {"delta": 456918, "theta": 18257, "low_alpha": 14292, "high_alpha": 15080, "low_beta": 7536, "high_beta": 5382, "low_gamma": 4958, "mid_gamma": 3824}}
+Unexpected error parsing CSV line '0,30,80,456918,18257,14292,15080,7536,5382,4958,3824': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:41.642025", "signal_quality": 0, "attention": 16, "meditation": 77, "eeg_power": {"delta": 2202251, "theta": 174705, "low_alpha": 51910, "high_alpha": 40404, "low_beta": 12812, "high_beta": 10502, "low_gamma": 19850, "mid_gamma": 11441}}
+Unexpected error parsing CSV line '0,16,77,2202251,174705,51910,40404,12812,10502,19850,11441': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:42.629132", "signal_quality": 0, "attention": 14, "meditation": 77, "eeg_power": {"delta": 124990, "theta": 12988, "low_alpha": 7290, "high_alpha": 2314, "low_beta": 2397, "high_beta": 2112, "low_gamma": 6292, "mid_gamma": 2846}}
+Unexpected error parsing CSV line '0,14,77,124990,12988,7290,2314,2397,2112,6292,2846': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:43.624624", "signal_quality": 0, "attention": 26, "meditation": 74, "eeg_power": {"delta": 111579, "theta": 46164, "low_alpha": 15322, "high_alpha": 12588, "low_beta": 7154, "high_beta": 12679, "low_gamma": 8913, "mid_gamma": 3928}}
+Unexpected error parsing CSV line '0,26,74,111579,46164,15322,12588,7154,12679,8913,3928': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:44.623804", "signal_quality": 0, "attention": 34, "meditation": 66, "eeg_power": {"delta": 367428, "theta": 71612, "low_alpha": 8094, "high_alpha": 45421, "low_beta": 22366, "high_beta": 29508, "low_gamma": 20098, "mid_gamma": 23571}}
+Unexpected error parsing CSV line '0,34,66,367428,71612,8094,45421,22366,29508,20098,23571': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:45.610858", "signal_quality": 0, "attention": 41, "meditation": 67, "eeg_power": {"delta": 53901, "theta": 7843, "low_alpha": 2966, "high_alpha": 2871, "low_beta": 1982, "high_beta": 1222, "low_gamma": 1976, "mid_gamma": 496}}
+Unexpected error parsing CSV line '0,41,67,53901,7843,2966,2871,1982,1222,1976,496': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:46.606367", "signal_quality": 0, "attention": 56, "meditation": 56, "eeg_power": {"delta": 120624, "theta": 20003, "low_alpha": 1441, "high_alpha": 4511, "low_beta": 7013, "high_beta": 12231, "low_gamma": 5649, "mid_gamma": 4520}}
+Unexpected error parsing CSV line '0,56,56,120624,20003,1441,4511,7013,12231,5649,4520': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:47.609777", "signal_quality": 0, "attention": 56, "meditation": 60, "eeg_power": {"delta": 1238174, "theta": 106839, "low_alpha": 51587, "high_alpha": 46542, "low_beta": 21627, "high_beta": 34412, "low_gamma": 21374, "mid_gamma": 33464}}
+Unexpected error parsing CSV line '0,56,60,1238174,106839,51587,46542,21627,34412,21374,33464': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:48.596944", "signal_quality": 0, "attention": 48, "meditation": 41, "eeg_power": {"delta": 205406, "theta": 152432, "low_alpha": 3185, "high_alpha": 6178, "low_beta": 2921, "high_beta": 14707, "low_gamma": 5774, "mid_gamma": 2716}}
+Unexpected error parsing CSV line '0,48,41,205406,152432,3185,6178,2921,14707,5774,2716': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:49.592207", "signal_quality": 0, "attention": 54, "meditation": 29, "eeg_power": {"delta": 96521, "theta": 57733, "low_alpha": 6842, "high_alpha": 4954, "low_beta": 13054, "high_beta": 11762, "low_gamma": 3619, "mid_gamma": 3847}}
+Unexpected error parsing CSV line '0,54,29,96521,57733,6842,4954,13054,11762,3619,3847': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:50.595705", "signal_quality": 0, "attention": 43, "meditation": 37, "eeg_power": {"delta": 1675815, "theta": 401759, "low_alpha": 133554, "high_alpha": 63895, "low_beta": 102973, "high_beta": 86363, "low_gamma": 27698, "mid_gamma": 52203}}
+Unexpected error parsing CSV line '0,43,37,1675815,401759,133554,63895,102973,86363,27698,52203': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:51.586827", "signal_quality": 0, "attention": 34, "meditation": 30, "eeg_power": {"delta": 358451, "theta": 187691, "low_alpha": 41374, "high_alpha": 25655, "low_beta": 4372, "high_beta": 15170, "low_gamma": 15338, "mid_gamma": 10949}}
+Unexpected error parsing CSV line '0,34,30,358451,187691,41374,25655,4372,15170,15338,10949': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:52.582162", "signal_quality": 0, "attention": 27, "meditation": 50, "eeg_power": {"delta": 1789219, "theta": 169621, "low_alpha": 46977, "high_alpha": 32813, "low_beta": 24274, "high_beta": 16046, "low_gamma": 13849, "mid_gamma": 5701}}
+Unexpected error parsing CSV line '0,27,50,1789219,169621,46977,32813,24274,16046,13849,5701': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:53.577231", "signal_quality": 0, "attention": 26, "meditation": 61, "eeg_power": {"delta": 1591898, "theta": 50319, "low_alpha": 22800, "high_alpha": 21553, "low_beta": 7993, "high_beta": 11980, "low_gamma": 16955, "mid_gamma": 7455}}
+Unexpected error parsing CSV line '0,26,61,1591898,50319,22800,21553,7993,11980,16955,7455': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:54.572504", "signal_quality": 0, "attention": 20, "meditation": 54, "eeg_power": {"delta": 474733, "theta": 136573, "low_alpha": 10560, "high_alpha": 13648, "low_beta": 6699, "high_beta": 10682, "low_gamma": 15357, "mid_gamma": 5477}}
+Unexpected error parsing CSV line '0,20,54,474733,136573,10560,13648,6699,10682,15357,5477': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:55.567845", "signal_quality": 0, "attention": 16, "meditation": 50, "eeg_power": {"delta": 994748, "theta": 233332, "low_alpha": 30900, "high_alpha": 16177, "low_beta": 11522, "high_beta": 11333, "low_gamma": 21033, "mid_gamma": 8375}}
+Unexpected error parsing CSV line '0,16,50,994748,233332,30900,16177,11522,11333,21033,8375': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:56.555018", "signal_quality": 0, "attention": 26, "meditation": 51, "eeg_power": {"delta": 943111, "theta": 10384, "low_alpha": 3639, "high_alpha": 5103, "low_beta": 1559, "high_beta": 3789, "low_gamma": 3708, "mid_gamma": 4095}}
+Unexpected error parsing CSV line '0,26,51,943111,10384,3639,5103,1559,3789,3708,4095': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:57.558348", "signal_quality": 0, "attention": 14, "meditation": 54, "eeg_power": {"delta": 873027, "theta": 145724, "low_alpha": 40578, "high_alpha": 84985, "low_beta": 23361, "high_beta": 10152, "low_gamma": 21932, "mid_gamma": 8759}}
+Unexpected error parsing CSV line '0,14,54,873027,145724,40578,84985,23361,10152,21932,8759': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:58.553859", "signal_quality": 0, "attention": 23, "meditation": 64, "eeg_power": {"delta": 2181616, "theta": 322013, "low_alpha": 137006, "high_alpha": 101073, "low_beta": 86190, "high_beta": 98330, "low_gamma": 65896, "mid_gamma": 46166}}
+Unexpected error parsing CSV line '0,23,64,2181616,322013,137006,101073,86190,98330,65896,46166': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:22:59.549150", "signal_quality": 0, "attention": 23, "meditation": 81, "eeg_power": {"delta": 1610124, "theta": 298883, "low_alpha": 300507, "high_alpha": 174184, "low_beta": 93272, "high_beta": 30004, "low_gamma": 56233, "mid_gamma": 33597}}
+Unexpected error parsing CSV line '0,23,81,1610124,298883,300507,174184,93272,30004,56233,33597': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:00.540302", "signal_quality": 0, "attention": 13, "meditation": 77, "eeg_power": {"delta": 627177, "theta": 238575, "low_alpha": 71623, "high_alpha": 12886, "low_beta": 22741, "high_beta": 19209, "low_gamma": 15888, "mid_gamma": 7796}}
+Unexpected error parsing CSV line '0,13,77,627177,238575,71623,12886,22741,19209,15888,7796': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:01.531350", "signal_quality": 0, "attention": 26, "meditation": 75, "eeg_power": {"delta": 360858, "theta": 14213, "low_alpha": 9232, "high_alpha": 5335, "low_beta": 5503, "high_beta": 3342, "low_gamma": 3617, "mid_gamma": 5174}}
+Unexpected error parsing CSV line '0,26,75,360858,14213,9232,5335,5503,3342,3617,5174': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:02.530788", "signal_quality": 0, "attention": 17, "meditation": 81, "eeg_power": {"delta": 945520, "theta": 48902, "low_alpha": 63590, "high_alpha": 16492, "low_beta": 13852, "high_beta": 10207, "low_gamma": 21661, "mid_gamma": 12639}}
+Unexpected error parsing CSV line '0,17,81,945520,48902,63590,16492,13852,10207,21661,12639': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:03.522115", "signal_quality": 0, "attention": 37, "meditation": 78, "eeg_power": {"delta": 1385271, "theta": 45993, "low_alpha": 54775, "high_alpha": 4635, "low_beta": 5920, "high_beta": 25870, "low_gamma": 29844, "mid_gamma": 6656}}
+Unexpected error parsing CSV line '0,37,78,1385271,45993,54775,4635,5920,25870,29844,6656': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:04.513199", "signal_quality": 0, "attention": 44, "meditation": 84, "eeg_power": {"delta": 124964, "theta": 17241, "low_alpha": 8799, "high_alpha": 5103, "low_beta": 2263, "high_beta": 4107, "low_gamma": 3641, "mid_gamma": 2199}}
+Unexpected error parsing CSV line '0,44,84,124964,17241,8799,5103,2263,4107,3641,2199': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:05.516697", "signal_quality": 0, "attention": 37, "meditation": 81, "eeg_power": {"delta": 1287616, "theta": 122348, "low_alpha": 43727, "high_alpha": 34245, "low_beta": 17623, "high_beta": 10792, "low_gamma": 13136, "mid_gamma": 13059}}
+Unexpected error parsing CSV line '0,37,81,1287616,122348,43727,34245,17623,10792,13136,13059': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:06.503763", "signal_quality": 0, "attention": 50, "meditation": 66, "eeg_power": {"delta": 159332, "theta": 24977, "low_alpha": 1487, "high_alpha": 5951, "low_beta": 4041, "high_beta": 8247, "low_gamma": 3486, "mid_gamma": 3431}}
+Unexpected error parsing CSV line '0,50,66,159332,24977,1487,5951,4041,8247,3486,3431': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:07.507153", "signal_quality": 0, "attention": 41, "meditation": 54, "eeg_power": {"delta": 597577, "theta": 158850, "low_alpha": 24200, "high_alpha": 20726, "low_beta": 27158, "high_beta": 21078, "low_gamma": 22821, "mid_gamma": 26099}}
+Unexpected error parsing CSV line '0,41,54,597577,158850,24200,20726,27158,21078,22821,26099': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:08.498466", "signal_quality": 0, "attention": 44, "meditation": 57, "eeg_power": {"delta": 287787, "theta": 40282, "low_alpha": 48682, "high_alpha": 9103, "low_beta": 18877, "high_beta": 18314, "low_gamma": 34440, "mid_gamma": 19181}}
+Unexpected error parsing CSV line '0,44,57,287787,40282,48682,9103,18877,18314,34440,19181': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:09.489645", "signal_quality": 0, "attention": 47, "meditation": 56, "eeg_power": {"delta": 1226443, "theta": 46016, "low_alpha": 17692, "high_alpha": 5595, "low_beta": 3917, "high_beta": 4451, "low_gamma": 5479, "mid_gamma": 4437}}
+Unexpected error parsing CSV line '0,47,56,1226443,46016,17692,5595,3917,4451,5479,4437': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:10.484834", "signal_quality": 0, "attention": 37, "meditation": 66, "eeg_power": {"delta": 187262, "theta": 23905, "low_alpha": 22532, "high_alpha": 1250, "low_beta": 5067, "high_beta": 4218, "low_gamma": 2932, "mid_gamma": 1948}}
+Unexpected error parsing CSV line '0,37,66,187262,23905,22532,1250,5067,4218,2932,1948': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:11.484454", "signal_quality": 0, "attention": 34, "meditation": 67, "eeg_power": {"delta": 1230786, "theta": 274092, "low_alpha": 46454, "high_alpha": 23819, "low_beta": 16265, "high_beta": 28021, "low_gamma": 25681, "mid_gamma": 12814}}
+Unexpected error parsing CSV line '0,34,67,1230786,274092,46454,23819,16265,28021,25681,12814': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:12.479713", "signal_quality": 0, "attention": 34, "meditation": 61, "eeg_power": {"delta": 1787451, "theta": 135684, "low_alpha": 43703, "high_alpha": 41834, "low_beta": 38208, "high_beta": 43958, "low_gamma": 21747, "mid_gamma": 11272}}
+Unexpected error parsing CSV line '0,34,61,1787451,135684,43703,41834,38208,43958,21747,11272': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:13.466807", "signal_quality": 0, "attention": 29, "meditation": 44, "eeg_power": {"delta": 175009, "theta": 140223, "low_alpha": 2217, "high_alpha": 8766, "low_beta": 6294, "high_beta": 7166, "low_gamma": 3436, "mid_gamma": 5921}}
+Unexpected error parsing CSV line '0,29,44,175009,140223,2217,8766,6294,7166,3436,5921': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:14.466045", "signal_quality": 0, "attention": 37, "meditation": 21, "eeg_power": {"delta": 910194, "theta": 241464, "low_alpha": 4289, "high_alpha": 9626, "low_beta": 6230, "high_beta": 51058, "low_gamma": 29635, "mid_gamma": 6634}}
+Unexpected error parsing CSV line '0,37,21,910194,241464,4289,9626,6230,51058,29635,6634': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:15.457428", "signal_quality": 0, "attention": 51, "meditation": 14, "eeg_power": {"delta": 57204, "theta": 55490, "low_alpha": 5341, "high_alpha": 4757, "low_beta": 8847, "high_beta": 26544, "low_gamma": 10848, "mid_gamma": 10018}}
+Unexpected error parsing CSV line '0,51,14,57204,55490,5341,4757,8847,26544,10848,10018': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:16.456648", "signal_quality": 0, "attention": 60, "meditation": 13, "eeg_power": {"delta": 551547, "theta": 30423, "low_alpha": 10529, "high_alpha": 12082, "low_beta": 7709, "high_beta": 23890, "low_gamma": 10461, "mid_gamma": 6192}}
+Unexpected error parsing CSV line '0,60,13,551547,30423,10529,12082,7709,23890,10461,6192': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:17.452040", "signal_quality": 0, "attention": 69, "meditation": 27, "eeg_power": {"delta": 219592, "theta": 41530, "low_alpha": 12130, "high_alpha": 10853, "low_beta": 12437, "high_beta": 9181, "low_gamma": 10931, "mid_gamma": 11130}}
+Unexpected error parsing CSV line '0,69,27,219592,41530,12130,10853,12437,9181,10931,11130': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:18.443134", "signal_quality": 0, "attention": 78, "meditation": 41, "eeg_power": {"delta": 52583, "theta": 21996, "low_alpha": 3746, "high_alpha": 4530, "low_beta": 8844, "high_beta": 13010, "low_gamma": 5940, "mid_gamma": 14668}}
+Unexpected error parsing CSV line '0,78,41,52583,21996,3746,4530,8844,13010,5940,14668': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:19.443159", "signal_quality": 0, "attention": 74, "meditation": 64, "eeg_power": {"delta": 450410, "theta": 78158, "low_alpha": 90705, "high_alpha": 115854, "low_beta": 11699, "high_beta": 65508, "low_gamma": 26573, "mid_gamma": 14168}}
+Unexpected error parsing CSV line '0,74,64,450410,78158,90705,115854,11699,65508,26573,14168': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:20.429668", "signal_quality": 0, "attention": 63, "meditation": 50, "eeg_power": {"delta": 88432, "theta": 56199, "low_alpha": 1655, "high_alpha": 2944, "low_beta": 4376, "high_beta": 8737, "low_gamma": 11531, "mid_gamma": 5788}}
+Unexpected error parsing CSV line '0,63,50,88432,56199,1655,2944,4376,8737,11531,5788': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:21.432561", "signal_quality": 0, "attention": 61, "meditation": 51, "eeg_power": {"delta": 772487, "theta": 107965, "low_alpha": 30266, "high_alpha": 30582, "low_beta": 4844, "high_beta": 18632, "low_gamma": 18574, "mid_gamma": 9420}}
+Unexpected error parsing CSV line '0,61,51,772487,107965,30266,30582,4844,18632,18574,9420': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:22.423859", "signal_quality": 0, "attention": 47, "meditation": 43, "eeg_power": {"delta": 829127, "theta": 185815, "low_alpha": 14147, "high_alpha": 4987, "low_beta": 14428, "high_beta": 16561, "low_gamma": 7894, "mid_gamma": 8565}}
+Unexpected error parsing CSV line '0,47,43,829127,185815,14147,4987,14428,16561,7894,8565': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:23.423173", "signal_quality": 0, "attention": 34, "meditation": 27, "eeg_power": {"delta": 347243, "theta": 418463, "low_alpha": 77057, "high_alpha": 41059, "low_beta": 50633, "high_beta": 30934, "low_gamma": 50989, "mid_gamma": 64184}}
+Unexpected error parsing CSV line '0,34,27,347243,418463,77057,41059,50633,30934,50989,64184': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:24.414416", "signal_quality": 0, "attention": 34, "meditation": 50, "eeg_power": {"delta": 796291, "theta": 27000, "low_alpha": 21288, "high_alpha": 13903, "low_beta": 13026, "high_beta": 10758, "low_gamma": 18456, "mid_gamma": 2745}}
+Unexpected error parsing CSV line '0,34,50,796291,27000,21288,13903,13026,10758,18456,2745': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:25.413751", "signal_quality": 0, "attention": 41, "meditation": 40, "eeg_power": {"delta": 346786, "theta": 237680, "low_alpha": 31297, "high_alpha": 19046, "low_beta": 37478, "high_beta": 68095, "low_gamma": 19333, "mid_gamma": 18625}}
+Unexpected error parsing CSV line '0,41,40,346786,237680,31297,19046,37478,68095,19333,18625': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:26.405265", "signal_quality": 0, "attention": 40, "meditation": 56, "eeg_power": {"delta": 466619, "theta": 63024, "low_alpha": 27800, "high_alpha": 14442, "low_beta": 8122, "high_beta": 7976, "low_gamma": 13763, "mid_gamma": 12366}}
+Unexpected error parsing CSV line '0,40,56,466619,63024,27800,14442,8122,7976,13763,12366': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:27.396649", "signal_quality": 0, "attention": 38, "meditation": 44, "eeg_power": {"delta": 1803628, "theta": 141012, "low_alpha": 2433, "high_alpha": 8631, "low_beta": 2601, "high_beta": 7422, "low_gamma": 26622, "mid_gamma": 9922}}
+Unexpected error parsing CSV line '0,38,44,1803628,141012,2433,8631,2601,7422,26622,9922': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:28.400114", "signal_quality": 0, "attention": 41, "meditation": 41, "eeg_power": {"delta": 1677709, "theta": 404808, "low_alpha": 201489, "high_alpha": 89878, "low_beta": 96223, "high_beta": 140143, "low_gamma": 76533, "mid_gamma": 69522}}
+Unexpected error parsing CSV line '0,41,41,1677709,404808,201489,89878,96223,140143,76533,69522': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:29.395253", "signal_quality": 0, "attention": 34, "meditation": 57, "eeg_power": {"delta": 1271958, "theta": 125776, "low_alpha": 120690, "high_alpha": 50092, "low_beta": 23256, "high_beta": 36523, "low_gamma": 23480, "mid_gamma": 32134}}
+Unexpected error parsing CSV line '0,34,57,1271958,125776,120690,50092,23256,36523,23480,32134': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:30.386590", "signal_quality": 0, "attention": 40, "meditation": 51, "eeg_power": {"delta": 1367650, "theta": 108226, "low_alpha": 19274, "high_alpha": 27264, "low_beta": 19204, "high_beta": 22891, "low_gamma": 13872, "mid_gamma": 11868}}
+Unexpected error parsing CSV line '0,40,51,1367650,108226,19274,27264,19204,22891,13872,11868': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:31.373526", "signal_quality": 0, "attention": 48, "meditation": 66, "eeg_power": {"delta": 116501, "theta": 18462, "low_alpha": 6836, "high_alpha": 897, "low_beta": 4556, "high_beta": 2891, "low_gamma": 3099, "mid_gamma": 3395}}
+Unexpected error parsing CSV line '0,48,66,116501,18462,6836,897,4556,2891,3099,3395': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:32.376933", "signal_quality": 0, "attention": 43, "meditation": 66, "eeg_power": {"delta": 293384, "theta": 70444, "low_alpha": 30198, "high_alpha": 25366, "low_beta": 10685, "high_beta": 17671, "low_gamma": 22380, "mid_gamma": 13373}}
+Unexpected error parsing CSV line '0,43,66,293384,70444,30198,25366,10685,17671,22380,13373': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:33.368133", "signal_quality": 0, "attention": 50, "meditation": 63, "eeg_power": {"delta": 33756, "theta": 31866, "low_alpha": 21189, "high_alpha": 3420, "low_beta": 5137, "high_beta": 11673, "low_gamma": 11276, "mid_gamma": 4717}}
+Unexpected error parsing CSV line '0,50,63,33756,31866,21189,3420,5137,11673,11276,4717': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:34.363643", "signal_quality": 0, "attention": 43, "meditation": 67, "eeg_power": {"delta": 241508, "theta": 133670, "low_alpha": 39925, "high_alpha": 66243, "low_beta": 12903, "high_beta": 17408, "low_gamma": 14871, "mid_gamma": 9407}}
+Unexpected error parsing CSV line '0,43,67,241508,133670,39925,66243,12903,17408,14871,9407': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:35.354763", "signal_quality": 0, "attention": 37, "meditation": 74, "eeg_power": {"delta": 391465, "theta": 43087, "low_alpha": 28273, "high_alpha": 1244, "low_beta": 6393, "high_beta": 4220, "low_gamma": 7599, "mid_gamma": 1813}}
+Unexpected error parsing CSV line '0,37,74,391465,43087,28273,1244,6393,4220,7599,1813': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:36.354005", "signal_quality": 0, "attention": 24, "meditation": 60, "eeg_power": {"delta": 448640, "theta": 135374, "low_alpha": 14248, "high_alpha": 4656, "low_beta": 7317, "high_beta": 5958, "low_gamma": 15392, "mid_gamma": 13957}}
+Unexpected error parsing CSV line '0,24,60,448640,135374,14248,4656,7317,5958,15392,13957': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:37.353517", "signal_quality": 0, "attention": 10, "meditation": 48, "eeg_power": {"delta": 1393027, "theta": 1051639, "low_alpha": 94387, "high_alpha": 43694, "low_beta": 51237, "high_beta": 55316, "low_gamma": 215538, "mid_gamma": 25312}}
+Unexpected error parsing CSV line '0,10,48,1393027,1051639,94387,43694,51237,55316,215538,25312': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:38.344805", "signal_quality": 0, "attention": 1, "meditation": 43, "eeg_power": {"delta": 1041273, "theta": 265648, "low_alpha": 86163, "high_alpha": 13976, "low_beta": 15629, "high_beta": 12880, "low_gamma": 35731, "mid_gamma": 12699}}
+Unexpected error parsing CSV line '0,1,43,1041273,265648,86163,13976,15629,12880,35731,12699': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:39.331947", "signal_quality": 0, "attention": 16, "meditation": 40, "eeg_power": {"delta": 907814, "theta": 8310, "low_alpha": 5422, "high_alpha": 1067, "low_beta": 3235, "high_beta": 3865, "low_gamma": 2964, "mid_gamma": 1120}}
+Unexpected error parsing CSV line '0,16,40,907814,8310,5422,1067,3235,3865,2964,1120': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:40.327143", "signal_quality": 0, "attention": 26, "meditation": 47, "eeg_power": {"delta": 115589, "theta": 37302, "low_alpha": 9712, "high_alpha": 3254, "low_beta": 6784, "high_beta": 5615, "low_gamma": 4960, "mid_gamma": 7364}}
+Unexpected error parsing CSV line '0,26,47,115589,37302,9712,3254,6784,5615,4960,7364': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:41.326375", "signal_quality": 0, "attention": 41, "meditation": 51, "eeg_power": {"delta": 419339, "theta": 61131, "low_alpha": 11612, "high_alpha": 4807, "low_beta": 5377, "high_beta": 16490, "low_gamma": 14585, "mid_gamma": 3385}}
+Unexpected error parsing CSV line '0,41,51,419339,61131,11612,4807,5377,16490,14585,3385': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:42.317597", "signal_quality": 0, "attention": 66, "meditation": 48, "eeg_power": {"delta": 67546, "theta": 8410, "low_alpha": 4087, "high_alpha": 6833, "low_beta": 19781, "high_beta": 9053, "low_gamma": 10164, "mid_gamma": 3952}}
+Unexpected error parsing CSV line '0,66,48,67546,8410,4087,6833,19781,9053,10164,3952': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:43.317059", "signal_quality": 0, "attention": 70, "meditation": 35, "eeg_power": {"delta": 182664, "theta": 113787, "low_alpha": 6520, "high_alpha": 8985, "low_beta": 31168, "high_beta": 53493, "low_gamma": 69678, "mid_gamma": 10887}}
+Unexpected error parsing CSV line '0,70,35,182664,113787,6520,8985,31168,53493,69678,10887': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:44.308275", "signal_quality": 0, "attention": 78, "meditation": 24, "eeg_power": {"delta": 301220, "theta": 74572, "low_alpha": 115, "high_alpha": 7635, "low_beta": 6873, "high_beta": 17825, "low_gamma": 15589, "mid_gamma": 7247}}
+Unexpected error parsing CSV line '0,78,24,301220,74572,115,7635,6873,17825,15589,7247': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:45.307159", "signal_quality": 0, "attention": 69, "meditation": 35, "eeg_power": {"delta": 657275, "theta": 93091, "low_alpha": 56372, "high_alpha": 20033, "low_beta": 10727, "high_beta": 16729, "low_gamma": 13891, "mid_gamma": 16125}}
+Unexpected error parsing CSV line '0,69,35,657275,93091,56372,20033,10727,16729,13891,16125': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:46.298321", "signal_quality": 0, "attention": 64, "meditation": 35, "eeg_power": {"delta": 237346, "theta": 19597, "low_alpha": 1646, "high_alpha": 8554, "low_beta": 6430, "high_beta": 8033, "low_gamma": 7722, "mid_gamma": 6732}}
+Unexpected error parsing CSV line '0,64,35,237346,19597,1646,8554,6430,8033,7722,6732': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:47.289548", "signal_quality": 0, "attention": 66, "meditation": 50, "eeg_power": {"delta": 249079, "theta": 9678, "low_alpha": 2643, "high_alpha": 9039, "low_beta": 6537, "high_beta": 11126, "low_gamma": 6960, "mid_gamma": 3886}}
+Unexpected error parsing CSV line '0,66,50,249079,9678,2643,9039,6537,11126,6960,3886': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:48.293042", "signal_quality": 0, "attention": 61, "meditation": 54, "eeg_power": {"delta": 1782974, "theta": 330741, "low_alpha": 33663, "high_alpha": 25099, "low_beta": 33733, "high_beta": 43880, "low_gamma": 43470, "mid_gamma": 16511}}
+Unexpected error parsing CSV line '0,61,54,1782974,330741,33663,25099,33733,43880,43470,16511': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:49.284106", "signal_quality": 0, "attention": 75, "meditation": 48, "eeg_power": {"delta": 174038, "theta": 27149, "low_alpha": 7499, "high_alpha": 6439, "low_beta": 5238, "high_beta": 18271, "low_gamma": 12008, "mid_gamma": 2701}}
+Unexpected error parsing CSV line '0,75,48,174038,27149,7499,6439,5238,18271,12008,2701': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:50.280028", "signal_quality": 0, "attention": 66, "meditation": 44, "eeg_power": {"delta": 510739, "theta": 90855, "low_alpha": 8019, "high_alpha": 15809, "low_beta": 6750, "high_beta": 13965, "low_gamma": 23909, "mid_gamma": 18866}}
+Unexpected error parsing CSV line '0,66,44,510739,90855,8019,15809,6750,13965,23909,18866': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:51.279291", "signal_quality": 0, "attention": 61, "meditation": 41, "eeg_power": {"delta": 1672114, "theta": 226386, "low_alpha": 39755, "high_alpha": 58101, "low_beta": 44909, "high_beta": 86922, "low_gamma": 57176, "mid_gamma": 28709}}
+Unexpected error parsing CSV line '0,61,41,1672114,226386,39755,58101,44909,86922,57176,28709': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:52.266477", "signal_quality": 0, "attention": 75, "meditation": 51, "eeg_power": {"delta": 213851, "theta": 11235, "low_alpha": 9675, "high_alpha": 4688, "low_beta": 6412, "high_beta": 12819, "low_gamma": 10213, "mid_gamma": 5589}}
+Unexpected error parsing CSV line '0,75,51,213851,11235,9675,4688,6412,12819,10213,5589': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:53.261730", "signal_quality": 0, "attention": 70, "meditation": 50, "eeg_power": {"delta": 831643, "theta": 47421, "low_alpha": 8160, "high_alpha": 6722, "low_beta": 2614, "high_beta": 18348, "low_gamma": 13412, "mid_gamma": 7502}}
+Unexpected error parsing CSV line '0,70,50,831643,47421,8160,6722,2614,18348,13412,7502': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:54.265066", "signal_quality": 0, "attention": 69, "meditation": 56, "eeg_power": {"delta": 609988, "theta": 402080, "low_alpha": 216212, "high_alpha": 28606, "low_beta": 43293, "high_beta": 63646, "low_gamma": 126092, "mid_gamma": 29537}}
+Unexpected error parsing CSV line '0,69,56,609988,402080,216212,28606,43293,63646,126092,29537': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:55.252276", "signal_quality": 0, "attention": 63, "meditation": 60, "eeg_power": {"delta": 825994, "theta": 83072, "low_alpha": 4032, "high_alpha": 38784, "low_beta": 2660, "high_beta": 18124, "low_gamma": 8540, "mid_gamma": 7423}}
+Unexpected error parsing CSV line '0,63,60,825994,83072,4032,38784,2660,18124,8540,7423': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:56.255799", "signal_quality": 0, "attention": 51, "meditation": 63, "eeg_power": {"delta": 616491, "theta": 950851, "low_alpha": 482451, "high_alpha": 419501, "low_beta": 76170, "high_beta": 318356, "low_gamma": 81876, "mid_gamma": 33880}}
+Unexpected error parsing CSV line '0,51,63,616491,950851,482451,419501,76170,318356,81876,33880': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:57.250927", "signal_quality": 0, "attention": 48, "meditation": 74, "eeg_power": {"delta": 1168762, "theta": 166902, "low_alpha": 107838, "high_alpha": 105125, "low_beta": 58503, "high_beta": 66030, "low_gamma": 18133, "mid_gamma": 32221}}
+Unexpected error parsing CSV line '0,48,74,1168762,166902,107838,105125,58503,66030,18133,32221': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:58.238047", "signal_quality": 0, "attention": 43, "meditation": 81, "eeg_power": {"delta": 641110, "theta": 50666, "low_alpha": 78783, "high_alpha": 9777, "low_beta": 12686, "high_beta": 7748, "low_gamma": 11313, "mid_gamma": 7803}}
+Unexpected error parsing CSV line '0,43,81,641110,50666,78783,9777,12686,7748,11313,7803': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:23:59.237779", "signal_quality": 0, "attention": 27, "meditation": 66, "eeg_power": {"delta": 1566308, "theta": 652885, "low_alpha": 32794, "high_alpha": 25554, "low_beta": 47494, "high_beta": 20661, "low_gamma": 21536, "mid_gamma": 17938}}
+Unexpected error parsing CSV line '0,27,66,1566308,652885,32794,25554,47494,20661,21536,17938': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:00.232782", "signal_quality": 0, "attention": 17, "meditation": 61, "eeg_power": {"delta": 1156583, "theta": 134515, "low_alpha": 34027, "high_alpha": 16412, "low_beta": 14069, "high_beta": 9359, "low_gamma": 12381, "mid_gamma": 14316}}
+Unexpected error parsing CSV line '0,17,61,1156583,134515,34027,16412,14069,9359,12381,14316': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:01.227616", "signal_quality": 0, "attention": 10, "meditation": 38, "eeg_power": {"delta": 1023876, "theta": 475462, "low_alpha": 10317, "high_alpha": 21075, "low_beta": 33828, "high_beta": 41919, "low_gamma": 38271, "mid_gamma": 20644}}
+Unexpected error parsing CSV line '0,10,38,1023876,475462,10317,21075,33828,41919,38271,20644': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:02.226973", "signal_quality": 0, "attention": 17, "meditation": 40, "eeg_power": {"delta": 652306, "theta": 465806, "low_alpha": 783355, "high_alpha": 104544, "low_beta": 53138, "high_beta": 189013, "low_gamma": 106398, "mid_gamma": 108276}}
+Unexpected error parsing CSV line '0,17,40,652306,465806,783355,104544,53138,189013,106398,108276': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:03.214095", "signal_quality": 0, "attention": 41, "meditation": 60, "eeg_power": {"delta": 895106, "theta": 21258, "low_alpha": 28323, "high_alpha": 15046, "low_beta": 8477, "high_beta": 24708, "low_gamma": 44539, "mid_gamma": 11216}}
+Unexpected error parsing CSV line '0,41,60,895106,21258,28323,15046,8477,24708,44539,11216': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:04.213418", "signal_quality": 0, "attention": 54, "meditation": 63, "eeg_power": {"delta": 1753109, "theta": 182396, "low_alpha": 77879, "high_alpha": 69559, "low_beta": 34653, "high_beta": 67714, "low_gamma": 38829, "mid_gamma": 45088}}
+Unexpected error parsing CSV line '0,54,63,1753109,182396,77879,69559,34653,67714,38829,45088': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:05.200572", "signal_quality": 0, "attention": 60, "meditation": 70, "eeg_power": {"delta": 327309, "theta": 75267, "low_alpha": 7075, "high_alpha": 7093, "low_beta": 8297, "high_beta": 12068, "low_gamma": 3587, "mid_gamma": 10384}}
+Unexpected error parsing CSV line '0,60,70,327309,75267,7075,7093,8297,12068,3587,10384': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:06.196255", "signal_quality": 0, "attention": 64, "meditation": 51, "eeg_power": {"delta": 1965587, "theta": 48587, "low_alpha": 7255, "high_alpha": 2907, "low_beta": 8957, "high_beta": 13263, "low_gamma": 8175, "mid_gamma": 4456}}
+Unexpected error parsing CSV line '0,64,51,1965587,48587,7255,2907,8957,13263,8175,4456': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:07.187583", "signal_quality": 0, "attention": 57, "meditation": 34, "eeg_power": {"delta": 195481, "theta": 43382, "low_alpha": 2234, "high_alpha": 5347, "low_beta": 17373, "high_beta": 9329, "low_gamma": 7102, "mid_gamma": 6351}}
+Unexpected error parsing CSV line '0,57,34,195481,43382,2234,5347,17373,9329,7102,6351': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:08.182735", "signal_quality": 0, "attention": 47, "meditation": 14, "eeg_power": {"delta": 46863, "theta": 40564, "low_alpha": 1651, "high_alpha": 1025, "low_beta": 1159, "high_beta": 3003, "low_gamma": 2064, "mid_gamma": 1725}}
+Unexpected error parsing CSV line '0,47,14,46863,40564,1651,1025,1159,3003,2064,1725': __str__ returned non-string (type NoneType)
+{"timestamp": "2025-06-07T05:24:09.186051", "signal_quality": 0, "attention": 50, "meditation": 17, "eeg_power": {"delta": 769598, "theta": 271323, "low_alpha": 22759, "high_alpha": 44039, "low_beta": 7568, "high_beta": 58999, "low_gamma": 20872, "mid_gamma": 17434}}
+Unexpected error parsing CSV line '0,50,17,769598,271323,22759,44039,7568,58999,20872,17434': __str__ returned non-string (type NoneType)
