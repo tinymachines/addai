@@ -11,7 +11,10 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 from sklearn.decomposition import PCA
 import warnings
 import sys
-from report_generator import ReportGenerator
+try:
+    from .report_generator import ReportGenerator
+except ImportError:
+    from report_generator import ReportGenerator
 
 warnings.filterwarnings("ignore")
 
@@ -370,87 +373,101 @@ class EEGDataAnalyzer:
     def prepare_analysis_data(self):
         """Prepare data structure for report generation."""
         power_cols = [col for col in self.df.columns if col.startswith("power_")]
-        
+
         # Extract time series data
-        timestamps = (self.df.index * self.stats_summary.get('basic', {}).get('sampling_rate', 1)).tolist()
-        
+        timestamps = (
+            self.df.index * self.stats_summary.get("basic", {}).get("sampling_rate", 1)
+        ).tolist()
+
         # Calculate attention and meditation from brainwave patterns
         # Using standard neurofeedback algorithms
         attention = []
         meditation = []
-        
+
         for idx in range(len(self.df)):
             # Attention: based on beta/theta ratio
-            if 'power_low_beta' in self.df.columns and 'power_theta' in self.df.columns:
-                beta = self.df['power_low_beta'].iloc[idx]
-                theta = self.df['power_theta'].iloc[idx]
-                attention_val = min(100, max(0, 50 + 10 * np.log10((beta + 1) / (theta + 1))))
+            if "power_low_beta" in self.df.columns and "power_theta" in self.df.columns:
+                beta = self.df["power_low_beta"].iloc[idx]
+                theta = self.df["power_theta"].iloc[idx]
+                attention_val = min(
+                    100, max(0, 50 + 10 * np.log10((beta + 1) / (theta + 1)))
+                )
             else:
                 attention_val = 50
             attention.append(attention_val)
-            
+
             # Meditation: based on alpha power
-            if 'power_low_alpha' in self.df.columns and 'power_high_alpha' in self.df.columns:
-                alpha = self.df['power_low_alpha'].iloc[idx] + self.df['power_high_alpha'].iloc[idx]
+            if (
+                "power_low_alpha" in self.df.columns
+                and "power_high_alpha" in self.df.columns
+            ):
+                alpha = (
+                    self.df["power_low_alpha"].iloc[idx]
+                    + self.df["power_high_alpha"].iloc[idx]
+                )
                 meditation_val = min(100, max(0, 30 + 0.01 * np.log10(alpha + 1)))
             else:
                 meditation_val = 50
             meditation.append(meditation_val)
-        
+
         # Organize brainwave data
         brainwaves = {}
         for band in self.eeg_bands:
             col_name = f"power_{band}"
             if col_name in self.df.columns:
                 brainwaves[band] = self.df[col_name].tolist()
-        
+
         # Calculate statistics
         statistics = {
-            'signal_quality': {
-                'mean': float(self.df['signal_quality'].mean()),
-                'std': float(self.df['signal_quality'].std()),
-                'min': float(self.df['signal_quality'].min()),
-                'max': float(self.df['signal_quality'].max())
+            "signal_quality": {
+                "mean": float(self.df["signal_quality"].mean()),
+                "std": float(self.df["signal_quality"].std()),
+                "min": float(self.df["signal_quality"].min()),
+                "max": float(self.df["signal_quality"].max()),
             },
-            'attention': {
-                'mean': float(np.mean(attention)),
-                'std': float(np.std(attention)),
-                'min': float(np.min(attention)),
-                'max': float(np.max(attention))
+            "attention": {
+                "mean": float(np.mean(attention)),
+                "std": float(np.std(attention)),
+                "min": float(np.min(attention)),
+                "max": float(np.max(attention)),
             },
-            'meditation': {
-                'mean': float(np.mean(meditation)),
-                'std': float(np.std(meditation)),
-                'min': float(np.min(meditation)),
-                'max': float(np.max(meditation))
+            "meditation": {
+                "mean": float(np.mean(meditation)),
+                "std": float(np.std(meditation)),
+                "min": float(np.min(meditation)),
+                "max": float(np.max(meditation)),
             },
-            'brainwaves': {}
+            "brainwaves": {},
         }
-        
+
         for band, values in brainwaves.items():
-            statistics['brainwaves'][band] = {
-                'mean': float(np.mean(values)),
-                'std': float(np.std(values)),
-                'min': float(np.min(values)),
-                'max': float(np.max(values))
+            statistics["brainwaves"][band] = {
+                "mean": float(np.mean(values)),
+                "std": float(np.std(values)),
+                "min": float(np.min(values)),
+                "max": float(np.max(values)),
             }
-        
+
         self.analysis_data = {
-            'timestamps': timestamps,
-            'signal_quality': self.df['signal_quality'].tolist(),
-            'attention': attention,
-            'meditation': meditation,
-            'brainwaves': brainwaves,
-            'statistics': statistics,
-            'duration': timestamps[-1] if timestamps else 0,
-            'total_samples': len(self.df),
-            'valid_samples': len(self.df[self.df['signal_quality'] < 200]),
-            'invalid_samples': len(self.df[self.df['signal_quality'] >= 200]),
-            'start_time': self.df['timestamp'].iloc[0].isoformat() if len(self.df) > 0 else None,
-            'end_time': self.df['timestamp'].iloc[-1].isoformat() if len(self.df) > 0 else None
+            "timestamps": timestamps,
+            "signal_quality": self.df["signal_quality"].tolist(),
+            "attention": attention,
+            "meditation": meditation,
+            "brainwaves": brainwaves,
+            "statistics": statistics,
+            "duration": timestamps[-1] if timestamps else 0,
+            "total_samples": len(self.df),
+            "valid_samples": len(self.df[self.df["signal_quality"] < 200]),
+            "invalid_samples": len(self.df[self.df["signal_quality"] >= 200]),
+            "start_time": (
+                self.df["timestamp"].iloc[0].isoformat() if len(self.df) > 0 else None
+            ),
+            "end_time": (
+                self.df["timestamp"].iloc[-1].isoformat() if len(self.df) > 0 else None
+            ),
         }
-    
-    def generate_visualizations(self):
+
+    def generate_visualizations(self, output_dir=None):
         """Generate comprehensive visualizations."""
         print("\n" + "=" * 60)
         print("GENERATING VISUALIZATIONS")
@@ -565,18 +582,48 @@ class EEGDataAnalyzer:
             plt.grid(True, alpha=0.3)
 
         plt.tight_layout()
-        plt.savefig("eeg_analysis_plots.png", dpi=300, bbox_inches="tight")
+        
+        # Save to specified output directory or current directory
+        if output_dir:
+            output_path = Path(output_dir) / "eeg_analysis_plots.png"
+            # Ensure directory exists
+            Path(output_dir).mkdir(parents=True, exist_ok=True)
+        else:
+            output_path = "eeg_analysis_plots.png"
+            
+        plt.savefig(output_path, dpi=300, bbox_inches="tight")
         plt.show()
 
-        print("✓ Visualizations saved as 'eeg_analysis_plots.png'")
-        
+        print(f"✓ Visualizations saved as '{output_path}'")
+
         # Generate reports if analysis data is prepared
         if self.analysis_data:
-            run_name, run_path = self.report_generator.generate_report(self.analysis_data)
-            print(f"✓ Reports generated in: {run_path}")
-            print(f"  - Markdown: {run_path}/report.md")
-            print(f"  - HTML: {run_path}/report.html")
-            print(f"  - JSON: {run_path}/report.json")
+            if output_dir:
+                # Create a temporary report generator that uses the output directory
+                temp_report_gen = ReportGenerator(str(Path(output_dir).parent))
+                
+                # Override the create_run_folder method to use the specified directory
+                def custom_create_run_folder():
+                    run_name = Path(output_dir).name
+                    run_path = Path(output_dir)
+                    run_path.mkdir(parents=True, exist_ok=True)
+                    return run_name, run_path
+                
+                temp_report_gen.create_run_folder = custom_create_run_folder
+                run_name, run_path = temp_report_gen.generate_report(self.analysis_data)
+                
+                print(f"✓ Reports generated in: {run_path}")
+                print(f"  - Markdown: {run_path}/report.md")
+                print(f"  - HTML: {run_path}/report.html")
+                print(f"  - JSON: {run_path}/report.json")
+            else:
+                run_name, run_path = self.report_generator.generate_report(
+                    self.analysis_data
+                )
+                print(f"✓ Reports generated in: {run_path}")
+                print(f"  - Markdown: {run_path}/report.md")
+                print(f"  - HTML: {run_path}/report.html")
+                print(f"  - JSON: {run_path}/report.json")
 
     def ml_readiness_report(self):
         """Generate ML readiness assessment."""
@@ -706,23 +753,49 @@ class EEGDataAnalyzer:
 
 
 # Usage example
-if __name__ == "__main__":
-
-    datadir="./logs"
-
-    # Initialize analyzer with your data files
-    analyzer = EEGDataAnalyzer(
-        [   f"{datadir}/xaa.json",
-            f"{datadir}/xab.json",
-            f"{datadir}/xac.json",
-            f"{datadir}/xad.json",
-            f"{datadir}/xae.json",
-        ]
-    )
-
+def main():
+    """Main function for command line usage."""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Run EEG analysis")
+    parser.add_argument("log_file", help="Path to EEG log file")
+    parser.add_argument("--output-dir", help="Output directory for results")
+    
+    args = parser.parse_args()
+    
+    # Initialize analyzer with the provided file
+    analyzer = EEGDataAnalyzer([args.log_file])
+    
+    # Patch the generate_visualizations method to accept output_dir
+    original_generate_visualizations = analyzer.generate_visualizations
+    def patched_generate_visualizations():
+        return original_generate_visualizations(output_dir=args.output_dir)
+    analyzer.generate_visualizations = patched_generate_visualizations
+    
     # Run complete analysis
     analyzer.run_complete_analysis()
 
-    # Access specific results
-    # print(analyzer.stats_summary['basic'])
-    # print(analyzer.stats_summary['correlations']['high_correlations'])
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        main()
+    else:
+        datadir = "./logs"
+
+        # Initialize analyzer with your data files
+        analyzer = EEGDataAnalyzer(
+            [
+                f"{datadir}/xaa.json",
+                f"{datadir}/xab.json",
+                f"{datadir}/xac.json",
+                f"{datadir}/xad.json",
+                f"{datadir}/xae.json",
+            ]
+        )
+
+        # Run complete analysis
+        analyzer.run_complete_analysis()
+
+        # Access specific results
+        # print(analyzer.stats_summary['basic'])
+        # print(analyzer.stats_summary['correlations']['high_correlations'])

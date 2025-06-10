@@ -16,180 +16,238 @@ class ReportGenerator:
         self.base_path = Path(base_path)
         self.base_path.mkdir(exist_ok=True)
         self.name_generator = RandomNameGenerator()
-        
+
     def create_run_folder(self) -> Tuple[str, Path]:
         """Create a new run folder with random name."""
         run_name = next(iter(self.name_generator))
         run_path = self.base_path / run_name
         run_path.mkdir(exist_ok=True)
         return run_name, run_path
-    
+
     def save_plot(self, fig: plt.Figure, run_path: Path, filename: str) -> str:
         """Save plot to run folder and return filename."""
         filepath = run_path / filename
-        fig.savefig(filepath, dpi=150, bbox_inches='tight')
+        fig.savefig(filepath, dpi=150, bbox_inches="tight")
         return filename
-    
+
     def plot_to_base64(self, fig: plt.Figure) -> str:
         """Convert plot to base64 for HTML embedding."""
         buffer = BytesIO()
-        fig.savefig(buffer, format='png', dpi=150, bbox_inches='tight')
+        fig.savefig(buffer, format="png", dpi=150, bbox_inches="tight")
         buffer.seek(0)
         img_str = base64.b64encode(buffer.read()).decode()
         buffer.close()
         return f"data:image/png;base64,{img_str}"
-    
+
     def generate_report(self, analysis_data: Dict[str, Any]) -> Tuple[str, Path]:
         """Generate all report formats."""
         run_name, run_path = self.create_run_folder()
-        
+
         # Generate plots
         plots = self._generate_plots(analysis_data, run_path)
-        
+
         # Generate reports
         self._generate_markdown_report(analysis_data, plots, run_path)
         self._generate_html_report(analysis_data, plots, run_path)
         self._generate_json_report(analysis_data, plots, run_path)
-        
+
         return run_name, run_path
-    
+
     def _generate_plots(self, data: Dict[str, Any], run_path: Path) -> Dict[str, str]:
         """Generate all plots and return filenames."""
         plots = {}
-        
+
         # 1. Signal Quality Over Time
         fig, ax = plt.subplots(figsize=(12, 6))
-        ax.plot(data['timestamps'], data['signal_quality'], 'b-', alpha=0.7)
-        ax.fill_between(data['timestamps'], data['signal_quality'], alpha=0.3)
-        ax.set_xlabel('Time (seconds)')
-        ax.set_ylabel('Signal Quality')
-        ax.set_title('Signal Quality Over Time')
+        ax.plot(data["timestamps"], data["signal_quality"], "b-", alpha=0.7)
+        ax.fill_between(data["timestamps"], data["signal_quality"], alpha=0.3)
+        ax.set_xlabel("Time (seconds)")
+        ax.set_ylabel("Signal Quality")
+        ax.set_title("Signal Quality Over Time")
         ax.invert_yaxis()  # Lower is better
         ax.grid(True, alpha=0.3)
-        plots['signal_quality'] = self.save_plot(fig, run_path, 'signal_quality.png')
-        plots['signal_quality_base64'] = self.plot_to_base64(fig)
+        plots["signal_quality"] = self.save_plot(fig, run_path, "signal_quality.png")
+        plots["signal_quality_base64"] = self.plot_to_base64(fig)
         plt.close(fig)
-        
+
         # 2. Attention and Meditation
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
-        
-        ax1.plot(data['timestamps'], data['attention'], 'g-', label='Attention', linewidth=2)
-        ax1.fill_between(data['timestamps'], data['attention'], alpha=0.3, color='green')
-        ax1.set_ylabel('Attention Level')
+
+        ax1.plot(
+            data["timestamps"], data["attention"], "g-", label="Attention", linewidth=2
+        )
+        ax1.fill_between(
+            data["timestamps"], data["attention"], alpha=0.3, color="green"
+        )
+        ax1.set_ylabel("Attention Level")
         ax1.set_ylim(0, 100)
         ax1.grid(True, alpha=0.3)
         ax1.legend()
-        
-        ax2.plot(data['timestamps'], data['meditation'], 'b-', label='Meditation', linewidth=2)
-        ax2.fill_between(data['timestamps'], data['meditation'], alpha=0.3, color='blue')
-        ax2.set_xlabel('Time (seconds)')
-        ax2.set_ylabel('Meditation Level')
+
+        ax2.plot(
+            data["timestamps"],
+            data["meditation"],
+            "b-",
+            label="Meditation",
+            linewidth=2,
+        )
+        ax2.fill_between(
+            data["timestamps"], data["meditation"], alpha=0.3, color="blue"
+        )
+        ax2.set_xlabel("Time (seconds)")
+        ax2.set_ylabel("Meditation Level")
         ax2.set_ylim(0, 100)
         ax2.grid(True, alpha=0.3)
         ax2.legend()
-        
-        plt.suptitle('Attention and Meditation Levels Over Time')
-        plots['attention_meditation'] = self.save_plot(fig, run_path, 'attention_meditation.png')
-        plots['attention_meditation_base64'] = self.plot_to_base64(fig)
+
+        plt.suptitle("Attention and Meditation Levels Over Time")
+        plots["attention_meditation"] = self.save_plot(
+            fig, run_path, "attention_meditation.png"
+        )
+        plots["attention_meditation_base64"] = self.plot_to_base64(fig)
         plt.close(fig)
-        
+
         # 3. Brainwave Distribution
         fig, ax = plt.subplots(figsize=(10, 8))
-        
-        wave_types = list(data['brainwaves'].keys())
-        avg_values = [np.mean(values) for values in data['brainwaves'].values()]
-        
-        bars = ax.bar(wave_types, avg_values, color=['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'purple'])
-        ax.set_xlabel('Brainwave Type')
-        ax.set_ylabel('Average Power')
-        ax.set_title('Average Brainwave Power Distribution')
-        ax.set_yscale('log')
-        
+
+        wave_types = list(data["brainwaves"].keys())
+        avg_values = [np.mean(values) for values in data["brainwaves"].values()]
+
+        bars = ax.bar(
+            wave_types,
+            avg_values,
+            color=[
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "indigo",
+                "violet",
+                "purple",
+            ],
+        )
+        ax.set_xlabel("Brainwave Type")
+        ax.set_ylabel("Average Power")
+        ax.set_title("Average Brainwave Power Distribution")
+        ax.set_yscale("log")
+
         # Add value labels on bars
         for bar, val in zip(bars, avg_values):
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2., height,
-                   f'{val:.0f}', ha='center', va='bottom')
-        
+            ax.text(
+                bar.get_x() + bar.get_width() / 2.0,
+                height,
+                f"{val:.0f}",
+                ha="center",
+                va="bottom",
+            )
+
         plt.tight_layout()
-        plots['brainwave_distribution'] = self.save_plot(fig, run_path, 'brainwave_distribution.png')
-        plots['brainwave_distribution_base64'] = self.plot_to_base64(fig)
+        plots["brainwave_distribution"] = self.save_plot(
+            fig, run_path, "brainwave_distribution.png"
+        )
+        plots["brainwave_distribution_base64"] = self.plot_to_base64(fig)
         plt.close(fig)
-        
+
         # 4. Brainwave Heatmap
         fig, ax = plt.subplots(figsize=(14, 8))
-        
+
         # Create matrix for heatmap
         wave_matrix = []
         for wave_type in wave_types:
-            wave_matrix.append(data['brainwaves'][wave_type])
-        
+            wave_matrix.append(data["brainwaves"][wave_type])
+
         # Downsample if too many time points
-        if len(data['timestamps']) > 100:
-            step = len(data['timestamps']) // 100
+        if len(data["timestamps"]) > 100:
+            step = len(data["timestamps"]) // 100
             wave_matrix = [wave[::step] for wave in wave_matrix]
-            time_labels = data['timestamps'][::step]
+            time_labels = data["timestamps"][::step]
         else:
-            time_labels = data['timestamps']
-        
+            time_labels = data["timestamps"]
+
         # Create heatmap
-        sns.heatmap(wave_matrix, 
-                   xticklabels=False,
-                   yticklabels=wave_types,
-                   cmap='viridis',
-                   cbar_kws={'label': 'Power'},
-                   ax=ax)
-        
-        ax.set_xlabel('Time')
-        ax.set_title('Brainwave Activity Heatmap')
-        
-        plots['brainwave_heatmap'] = self.save_plot(fig, run_path, 'brainwave_heatmap.png')
-        plots['brainwave_heatmap_base64'] = self.plot_to_base64(fig)
+        sns.heatmap(
+            wave_matrix,
+            xticklabels=False,
+            yticklabels=wave_types,
+            cmap="viridis",
+            cbar_kws={"label": "Power"},
+            ax=ax,
+        )
+
+        ax.set_xlabel("Time")
+        ax.set_title("Brainwave Activity Heatmap")
+
+        plots["brainwave_heatmap"] = self.save_plot(
+            fig, run_path, "brainwave_heatmap.png"
+        )
+        plots["brainwave_heatmap_base64"] = self.plot_to_base64(fig)
         plt.close(fig)
-        
+
         # 5. Statistical Summary Plot
         fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
-        
+
         # Attention distribution
-        ax1.hist(data['attention'], bins=20, alpha=0.7, color='green', edgecolor='black')
-        ax1.axvline(np.mean(data['attention']), color='red', linestyle='--', label=f"Mean: {np.mean(data['attention']):.1f}")
-        ax1.set_xlabel('Attention Level')
-        ax1.set_ylabel('Frequency')
-        ax1.set_title('Attention Distribution')
+        ax1.hist(
+            data["attention"], bins=20, alpha=0.7, color="green", edgecolor="black"
+        )
+        ax1.axvline(
+            np.mean(data["attention"]),
+            color="red",
+            linestyle="--",
+            label=f"Mean: {np.mean(data['attention']):.1f}",
+        )
+        ax1.set_xlabel("Attention Level")
+        ax1.set_ylabel("Frequency")
+        ax1.set_title("Attention Distribution")
         ax1.legend()
-        
+
         # Meditation distribution
-        ax2.hist(data['meditation'], bins=20, alpha=0.7, color='blue', edgecolor='black')
-        ax2.axvline(np.mean(data['meditation']), color='red', linestyle='--', label=f"Mean: {np.mean(data['meditation']):.1f}")
-        ax2.set_xlabel('Meditation Level')
-        ax2.set_ylabel('Frequency')
-        ax2.set_title('Meditation Distribution')
+        ax2.hist(
+            data["meditation"], bins=20, alpha=0.7, color="blue", edgecolor="black"
+        )
+        ax2.axvline(
+            np.mean(data["meditation"]),
+            color="red",
+            linestyle="--",
+            label=f"Mean: {np.mean(data['meditation']):.1f}",
+        )
+        ax2.set_xlabel("Meditation Level")
+        ax2.set_ylabel("Frequency")
+        ax2.set_title("Meditation Distribution")
         ax2.legend()
-        
+
         # Correlation scatter
-        ax3.scatter(data['attention'], data['meditation'], alpha=0.5)
-        ax3.set_xlabel('Attention')
-        ax3.set_ylabel('Meditation')
-        ax3.set_title(f"Attention vs Meditation (r={np.corrcoef(data['attention'], data['meditation'])[0,1]:.2f})")
-        
+        ax3.scatter(data["attention"], data["meditation"], alpha=0.5)
+        ax3.set_xlabel("Attention")
+        ax3.set_ylabel("Meditation")
+        ax3.set_title(
+            f"Attention vs Meditation (r={np.corrcoef(data['attention'], data['meditation'])[0,1]:.2f})"
+        )
+
         # Box plots
-        box_data = [data['attention'], data['meditation']]
-        ax4.boxplot(box_data, labels=['Attention', 'Meditation'])
-        ax4.set_ylabel('Level')
-        ax4.set_title('Statistical Summary')
+        box_data = [data["attention"], data["meditation"]]
+        ax4.boxplot(box_data, labels=["Attention", "Meditation"])
+        ax4.set_ylabel("Level")
+        ax4.set_title("Statistical Summary")
         ax4.grid(True, alpha=0.3)
-        
+
         plt.tight_layout()
-        plots['statistical_summary'] = self.save_plot(fig, run_path, 'statistical_summary.png')
-        plots['statistical_summary_base64'] = self.plot_to_base64(fig)
+        plots["statistical_summary"] = self.save_plot(
+            fig, run_path, "statistical_summary.png"
+        )
+        plots["statistical_summary_base64"] = self.plot_to_base64(fig)
         plt.close(fig)
-        
+
         return plots
-    
-    def _generate_markdown_report(self, data: Dict[str, Any], plots: Dict[str, str], run_path: Path):
+
+    def _generate_markdown_report(
+        self, data: Dict[str, Any], plots: Dict[str, str], run_path: Path
+    ):
         """Generate Markdown report."""
-        stats = data['statistics']
-        
+        stats = data["statistics"]
+
         markdown = f"""# EEG Analysis Report
 
 **Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  
@@ -234,10 +292,10 @@ Average signal quality: {stats['signal_quality']['mean']:.1f} (0=best, 200=worst
 | Wave Type | Mean | Std Dev | Min | Max |
 |-----------|------|---------|-----|-----|
 """
-        
-        for wave_type, wave_stats in stats['brainwaves'].items():
+
+        for wave_type, wave_stats in stats["brainwaves"].items():
             markdown += f"| {wave_type.capitalize()} | {wave_stats['mean']:.0f} | {wave_stats['std']:.0f} | {wave_stats['min']:.0f} | {wave_stats['max']:.0f} |\n"
-        
+
         markdown += f"""
 
 ## Statistical Analysis
@@ -263,14 +321,16 @@ Average signal quality: {stats['signal_quality']['mean']:.1f} (0=best, 200=worst
 ---
 *Report generated by AddAI EEG Analysis Tool*
 """
-        
-        with open(run_path / 'report.md', 'w') as f:
+
+        with open(run_path / "report.md", "w") as f:
             f.write(markdown)
-    
-    def _generate_html_report(self, data: Dict[str, Any], plots: Dict[str, str], run_path: Path):
+
+    def _generate_html_report(
+        self, data: Dict[str, Any], plots: Dict[str, str], run_path: Path
+    ):
         """Generate standalone HTML report with embedded assets."""
-        stats = data['statistics']
-        
+        stats = data["statistics"]
+
         html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -431,8 +491,8 @@ Average signal quality: {stats['signal_quality']['mean']:.1f} (0=best, 200=worst
                 <th>Max</th>
             </tr>
 """
-        
-        for wave_type, wave_stats in stats['brainwaves'].items():
+
+        for wave_type, wave_stats in stats["brainwaves"].items():
             html += f"""
             <tr>
                 <td>{wave_type.capitalize()}</td>
@@ -442,7 +502,7 @@ Average signal quality: {stats['signal_quality']['mean']:.1f} (0=best, 200=worst
                 <td>{wave_stats['max']:.0f}</td>
             </tr>
 """
-        
+
         html += f"""
         </table>
         
@@ -498,52 +558,98 @@ Average signal quality: {stats['signal_quality']['mean']:.1f} (0=best, 200=worst
 </body>
 </html>
 """
-        
-        with open(run_path / 'report.html', 'w') as f:
+
+        with open(run_path / "report.html", "w") as f:
             f.write(html)
-    
-    def _generate_json_report(self, data: Dict[str, Any], plots: Dict[str, str], run_path: Path):
+
+    def _generate_json_report(
+        self, data: Dict[str, Any], plots: Dict[str, str], run_path: Path
+    ):
         """Generate JSON report for programmatic consumption."""
         report_data = {
-            'run_id': run_path.name,
-            'generated_at': datetime.now().isoformat(),
-            'duration_seconds': data['duration'],
-            'total_samples': data['total_samples'],
-            'valid_samples': data.get('valid_samples', data['total_samples']),
-            'invalid_samples': data.get('invalid_samples', 0),
-            'sample_rate_hz': data['total_samples'] / data['duration'],
-            'start_time': data.get('start_time', None),
-            'end_time': data.get('end_time', None),
-            'statistics': data['statistics'],
-            'plots': {k: v for k, v in plots.items() if not k.endswith('_base64')},
-            'analysis': {
-                'signal_quality_assessment': 'good' if data['statistics']['signal_quality']['mean'] < 50 else 'poor' if data['statistics']['signal_quality']['mean'] > 100 else 'moderate',
-                'attention_level': 'high' if data['statistics']['attention']['mean'] > 60 else 'low' if data['statistics']['attention']['mean'] < 40 else 'moderate',
-                'meditation_level': 'high' if data['statistics']['meditation']['mean'] > 60 else 'low' if data['statistics']['meditation']['mean'] < 40 else 'moderate',
-                'dominant_brainwave': max(data['statistics']['brainwaves'].items(), key=lambda x: x[1]['mean'])[0],
-                'attention_meditation_correlation': float(np.corrcoef(data['attention'], data['meditation'])[0,1])
+            "run_id": run_path.name,
+            "generated_at": datetime.now().isoformat(),
+            "duration_seconds": data["duration"],
+            "total_samples": data["total_samples"],
+            "valid_samples": data.get("valid_samples", data["total_samples"]),
+            "invalid_samples": data.get("invalid_samples", 0),
+            "sample_rate_hz": data["total_samples"] / data["duration"],
+            "start_time": data.get("start_time", None),
+            "end_time": data.get("end_time", None),
+            "statistics": data["statistics"],
+            "plots": {k: v for k, v in plots.items() if not k.endswith("_base64")},
+            "analysis": {
+                "signal_quality_assessment": (
+                    "good"
+                    if data["statistics"]["signal_quality"]["mean"] < 50
+                    else (
+                        "poor"
+                        if data["statistics"]["signal_quality"]["mean"] > 100
+                        else "moderate"
+                    )
+                ),
+                "attention_level": (
+                    "high"
+                    if data["statistics"]["attention"]["mean"] > 60
+                    else (
+                        "low"
+                        if data["statistics"]["attention"]["mean"] < 40
+                        else "moderate"
+                    )
+                ),
+                "meditation_level": (
+                    "high"
+                    if data["statistics"]["meditation"]["mean"] > 60
+                    else (
+                        "low"
+                        if data["statistics"]["meditation"]["mean"] < 40
+                        else "moderate"
+                    )
+                ),
+                "dominant_brainwave": max(
+                    data["statistics"]["brainwaves"].items(), key=lambda x: x[1]["mean"]
+                )[0],
+                "attention_meditation_correlation": float(
+                    np.corrcoef(data["attention"], data["meditation"])[0, 1]
+                ),
             },
-            'raw_data_summary': {
-                'attention': {
-                    'samples': len(data['attention']),
-                    'first_10': data['attention'][:10] if len(data['attention']) >= 10 else data['attention'],
-                    'last_10': data['attention'][-10:] if len(data['attention']) >= 10 else data['attention']
+            "raw_data_summary": {
+                "attention": {
+                    "samples": len(data["attention"]),
+                    "first_10": (
+                        data["attention"][:10]
+                        if len(data["attention"]) >= 10
+                        else data["attention"]
+                    ),
+                    "last_10": (
+                        data["attention"][-10:]
+                        if len(data["attention"]) >= 10
+                        else data["attention"]
+                    ),
                 },
-                'meditation': {
-                    'samples': len(data['meditation']),
-                    'first_10': data['meditation'][:10] if len(data['meditation']) >= 10 else data['meditation'],
-                    'last_10': data['meditation'][-10:] if len(data['meditation']) >= 10 else data['meditation']
+                "meditation": {
+                    "samples": len(data["meditation"]),
+                    "first_10": (
+                        data["meditation"][:10]
+                        if len(data["meditation"]) >= 10
+                        else data["meditation"]
+                    ),
+                    "last_10": (
+                        data["meditation"][-10:]
+                        if len(data["meditation"]) >= 10
+                        else data["meditation"]
+                    ),
                 },
-                'brainwaves': {
+                "brainwaves": {
                     wave_type: {
-                        'samples': len(values),
-                        'first_10': values[:10] if len(values) >= 10 else values,
-                        'last_10': values[-10:] if len(values) >= 10 else values
+                        "samples": len(values),
+                        "first_10": values[:10] if len(values) >= 10 else values,
+                        "last_10": values[-10:] if len(values) >= 10 else values,
                     }
-                    for wave_type, values in data['brainwaves'].items()
-                }
-            }
+                    for wave_type, values in data["brainwaves"].items()
+                },
+            },
         }
-        
-        with open(run_path / 'report.json', 'w') as f:
+
+        with open(run_path / "report.json", "w") as f:
             json.dump(report_data, f, indent=2)
